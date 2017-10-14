@@ -1,22 +1,22 @@
-#Currency Converter
+# Currency Converter
 
 This is a ruby on rails app, which provides a form where you can enter a price and
 convert it to another currency.
 
-##About
+## About
 
 Rate model contains fields for date, currency and rate
 
 The database of rates is updated daily by a cron job from
 http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml
 
-##Requirements
+## Requirements
 
 * Ruby 2.4.1 - can be installed from https://www.ruby-lang.org/en/downloads/
 * Rails 5.1.4 - installation below
 * SQLite3 3.8.10.2 - can be installed from https://www.sqlite.org/
 
-##Installation
+## Installation
 
 All commands run from the currencyConverter directory
 
@@ -34,20 +34,21 @@ From the currencyConverter directory run
 View the application:
 Open http://localhost:3000 in your browser
 
-##How to use
+## How to use
 
 
 
-##To do
+## To do
 
-[ ] Parse xml to get rates
-[ ] Update db with rates
-[ ] Set up task to update rates daily
-[ ] Style page(s)
-[ ] Tests
+* [ ]
+* [ ] Parse xml to get rates
+* [ ] Update db with rates
+* [ ] Set up task to update rates daily
+* [ ] Style page(s)
+* [ ] Tests
 
-[ ] number_field_tag is not accepting decimals even though I set a step value
-[ ] Validation so that you cannot enter the same To/From currencies
+* [ ] number_field_tag is not accepting decimals even though I set a step value
+* [ ] Validation so that you cannot enter the same To/From currencies
 
 
 This README would normally document whatever steps are necessary to get the
