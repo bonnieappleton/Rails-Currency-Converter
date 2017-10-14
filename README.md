@@ -40,15 +40,21 @@ Open http://localhost:3000 in your browser
 
 ## To do
 
-* [ ]
+* [ ] Take input and calculate new price
+* [ ] Display new price and old price
 * [ ] Parse xml to get rates
 * [ ] Update db with rates
 * [ ] Set up task to update rates daily
 * [ ] Style page(s)
 * [ ] Tests
 
-* [ ] number_field_tag is not accepting decimals even though I set a step value
+
+## Future improvements
+
+* [ ] number_field_tag is not accepting decimals (I tried setting a step value)
 * [ ] Validation so that you cannot enter the same To/From currencies
+* [ ] Validation to prevent entering future dates
+
 
 
 This README would normally document whatever steps are necessary to get the
