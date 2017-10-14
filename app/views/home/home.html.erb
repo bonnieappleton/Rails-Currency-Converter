@@ -1,0 +1,28 @@
+<h1>Currency Converter</h1>
+<p>Enter an amount and select the currencies you want to convert from and to.</p>
+
+<%= form_tag do %>
+  <p>
+    <%= label_tag :date %><br>
+    <%= date_select :date, :default => Date.today %>
+  </p>
+ 
+  <p>
+    <%= label_tag :amount %><br>
+    <%= number_field_tag :amount, step: :any %>
+  </p>
+  
+  <p>
+    <%= label_tag :from %><br>
+    <%= select_tag :from, options_for_select(@currencies) %>
+  </p>
+  
+  <p>
+    <%= label_tag :to %><br>
+    <%= select_tag :to, options_for_select(@currencies) %>
+  </p>
+   
+  <p>
+    <%= submit_tag("Convert") %>
+  </p>
+<% end %>
