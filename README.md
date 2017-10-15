@@ -43,8 +43,8 @@ Open http://localhost:3000 in your browser
 * [x] Display new price and old price
 * [x] Parse xml to get rates
 * [x] Update db with rates
-* [ ] Set up task to update rates daily
-* [ ] Style page(s)
+* [x] Set up task to update rates daily
+* [x] Style page(s)
 * [ ] Tests
 
 
@@ -54,8 +54,8 @@ Open http://localhost:3000 in your browser
 * [ ] Validation so that you cannot enter the same To/From currencies
 * [ ] Validation to prevent entering future dates
 * [ ] Currency/date combo should be unique in db
-* [ ] Rates are not updated on the weekend, so on weekends the default date is incorrect
-
+* [ ] Rates are not updated on the weekend, so set default date to last day with rates
+* [ ] Add autoprefixer for flex and other css prefixes
 
 
 This README would normally document whatever steps are necessary to get the

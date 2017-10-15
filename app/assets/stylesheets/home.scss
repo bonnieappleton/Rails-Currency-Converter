@@ -1,3 +1,48 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  margin: auto;
+  max-width: 300px;
+  font-family: helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-family: georgia, serif;
+  font-size: 29px;
+}
+
+.form {
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  &__row {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__field {
+    text-align: left;
+  }
+  input, select {
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+  input[type="submit"] {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+.result {
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
