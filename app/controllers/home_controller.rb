@@ -4,20 +4,21 @@ class HomeController < ApplicationController
     @currencies = (@rates.pluck(:currency).uniq - [nil]).sort
     if params[:amount]
       date = params[:date]
-      formatted_date = "#{date['year']}-#{date['month']}-#{date['day']}"
-      amount = params[:amount]
-      from = params[:from]
-      to = params[:to]
-      puts "Amount: #{amount}"
-      puts "Date: #{formatted_date}"
-      puts "From: #{from}"
+      @formatted_date = "#{date['year']}-#{date['month']}-#{date['day']}"
+      @amount = params[:amount]
+      @from = params[:from]
+      @to = params[:to]
       
-      from_rate = Rate.find_by(date: formatted_date, currency: from).rate
-      to_rate = Rate.find_by(date: formatted_date, currency: to).rate
+      from_rate = Rate.find_by(date: @formatted_date, currency: @from).rate
+      to_rate = Rate.find_by(date: @formatted_date, currency: @to).rate
       
-      converted_amount = amount * (to_rate / from_rate)
+      puts to_rate
+      puts from_rate
+      puts to_rate/from_rate
       
-      puts converted_amount
+      @converted_amount = @amount * (to_rate / from_rate)
+      
+      puts @converted_amount
     end
   end
   

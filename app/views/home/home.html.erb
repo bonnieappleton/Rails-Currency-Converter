@@ -26,3 +26,10 @@
     <%= submit_tag("Convert") %>
   </p>
 <% end %>
+
+<% if @converted_amount %>
+  <div>
+    <p><%= @amount %><%= @from %> = <%= @converted_amount %><%= @to %> on <%= @formatted_date %></p>
+  </div>
+<% end %>
+

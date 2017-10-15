@@ -40,7 +40,7 @@ Open http://localhost:3000 in your browser
 
 ## To do
 
-* [ ] Take input and calculate new price
+* [x] Take input and calculate new price
 * [ ] Display new price and old price
 * [ ] Parse xml to get rates
 * [ ] Update db with rates
@@ -54,6 +54,7 @@ Open http://localhost:3000 in your browser
 * [ ] number_field_tag is not accepting decimals (I tried setting a step value)
 * [ ] Validation so that you cannot enter the same To/From currencies
 * [ ] Validation to prevent entering future dates
+* [ ] Currency/date combo should be unique in db
 
 
 
