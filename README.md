@@ -33,50 +33,13 @@ Start up a local server:
 View the application:
 Open http://localhost:3000 in your browser
 
-## How to use
-
-
-
-## To do
-
-* [x] Take input and calculate new price
-* [x] Display new price and old price
-* [x] Parse xml to get rates
-* [x] Update db with rates
-* [x] Set up task to update rates daily
-* [x] Style page(s)
-* [ ] Tests
-
-
 ## Future improvements
 
-* [ ] number_field_tag is not accepting decimals (I tried setting a step value)
+* [ ] I wasn't sure how to update from store, so I did it from the feed
+* [ ] Tests for the conversion functionality
+* [ ] number_field_tag is not accepting decimals (I tried setting a step value, but it didn't work)
 * [ ] Validation so that you cannot enter the same To/From currencies
 * [ ] Validation to prevent entering future dates
 * [ ] Currency/date combo should be unique in db
 * [ ] Rates are not updated on the weekend, so set default date to last day with rates
 * [ ] Add autoprefixer for flex and other css prefixes
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
