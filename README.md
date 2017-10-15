@@ -18,17 +18,16 @@ http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml
 
 ## Installation
 
-All commands run from the currencyConverter directory
+All commands run from the currencyConverter directory unless specified
 
 Install Rails:
 `gem install rails`
 
 Set up the database:
-From the currencyConverter directory run
 `rails db:migrate`
+From `/lib/tasks` run `rake import:full_xml` to populate the database
 
 Start up a local server:
-From the currencyConverter directory run
 `rails server`
 
 View the application:
@@ -41,9 +40,9 @@ Open http://localhost:3000 in your browser
 ## To do
 
 * [x] Take input and calculate new price
-* [ ] Display new price and old price
-* [ ] Parse xml to get rates
-* [ ] Update db with rates
+* [x] Display new price and old price
+* [x] Parse xml to get rates
+* [x] Update db with rates
 * [ ] Set up task to update rates daily
 * [ ] Style page(s)
 * [ ] Tests
@@ -55,6 +54,7 @@ Open http://localhost:3000 in your browser
 * [ ] Validation so that you cannot enter the same To/From currencies
 * [ ] Validation to prevent entering future dates
 * [ ] Currency/date combo should be unique in db
+* [ ] Rates are not updated on the weekend, so on weekends the default date is incorrect
 
 
 
