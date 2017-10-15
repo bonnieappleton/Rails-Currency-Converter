@@ -31,5 +31,9 @@
   <div>
     <p><%= @amount %> <%= @from %> = <%= @converted_amount %> <%= @to %> on <%= @formatted_date %></p>
   </div>
+<% else %>
+  <div>
+    <p>There is no exchange rate for that date, please try again</p>
+  </div>
 <% end %>
 

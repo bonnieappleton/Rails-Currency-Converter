@@ -8,17 +8,16 @@ class HomeController < ApplicationController
       @amount = params[:amount]
       @from = params[:from]
       @to = params[:to]
+      @converted_amount = nil
       
-      from_rate = Rate.find_by(date: @formatted_date, currency: @from).rate
-      to_rate = Rate.find_by(date: @formatted_date, currency: @to).rate
+      from_record = Rate.find_by(date: @formatted_date, currency: @from)
+      to_record = Rate.find_by(date: @formatted_date, currency: @to)
       
-      puts to_rate
-      puts from_rate
-      puts to_rate/from_rate
-      
-      @converted_amount = @amount * (to_rate / from_rate)
-      
-      puts @converted_amount
+      if from_record && to_record
+        from_rate = from_record.rate
+        to_rate = to_record.rate
+        @converted_amount = @amount * (to_rate / from_rate)
+      end
     end
   end
   
