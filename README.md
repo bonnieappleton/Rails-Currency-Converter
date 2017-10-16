@@ -13,31 +13,32 @@ http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml
 ## Requirements
 
 * Ruby 2.4.1 - can be installed from https://www.ruby-lang.org/en/downloads/
-* Rails 5.1.4 - installation below
-* SQLite3 3.8.10.2 - can be installed from https://www.sqlite.org/
+* Rails 5.1.4 - `gem install rails`
 
-## Installation
+## How to use
 
-All commands run from the currencyConverter directory unless specified
+# Start up a local server
 
-Install Rails:
-`gem install rails`
+Navigate to the currencyConverter folder and run `rails server`
 
-Set up the database:
-`rails db:migrate`
-From `/lib/tasks` run `rake import:full_xml` to populate the database
+# View the application
 
-Start up a local server:
-`rails server`
-
-View the application:
 Open http://localhost:3000 in your browser
+
+## Tasks
+
+Tasks are in `lib/tasks`.
+
+You can use `rake import:full_xml` to fully populate the database - the db in this
+project is already populated.
+
+You can use `rake import:daily_xml` to get today's rates. The latter is run as a
+daily cron job, so you shouldn't need to run it.
 
 ## Future improvements
 
 * [ ] I wasn't sure how to update from store, so I did it from the feed
 * [ ] Tests for the conversion functionality
-* [ ] number_field_tag is not accepting decimals (I tried setting a step value, but it didn't work)
 * [ ] Validation so that you cannot enter the same To/From currencies
 * [ ] Validation to prevent entering future dates
 * [ ] Currency/date combo should be unique in db

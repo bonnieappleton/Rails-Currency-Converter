@@ -6,7 +6,7 @@
     <div class="form__row">
       <div class="form__field">
         <%= label_tag :amount %><br>
-        <%= number_field_tag :amount %>
+        <%= number_field_tag :amount, nil, step: 0.01, min: 0 %>
       </div>
       <div class="form__field">
         <%= label_tag :from %><br>
@@ -29,12 +29,13 @@
     </div>
   <% end %>
 
-  <p class="result">
+  <div class="result">
     <% if @converted_amount %>
-      <%= @amount %> <%= @from %> = <%= @converted_amount %> <%= @to %> on <%= @formatted_date %>
+      <p><%= @amount %> <%= @from %> = <%= @converted_amount %> <%= @to %></p>
+      <p><%= @formatted_date %></p>
     <% else %>
-      There is no exchange rate for that date, please try again
+      <p>There is no exchange rate for that date, please try again</p>
     <% end %>
-  </p>
+  </div>
 </div>
 
