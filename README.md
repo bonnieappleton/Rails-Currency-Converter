@@ -17,11 +17,11 @@ http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml
 
 ## How to use
 
-# Start up a local server
+### Start up a local server
 
 Navigate to the currencyConverter folder and run `rails server`
 
-# View the application
+### View the application
 
 Open http://localhost:3000 in your browser
 
